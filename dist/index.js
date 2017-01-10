@@ -69,8 +69,8 @@ var DocblockJsonToMarkdown = function DocblockJsonToMarkdown() {
 	}
 };
 
-docblockToMarkdown.prototype.jsonToMarkdown = _jsonToMarkdown2.default;
-docblockToMarkdown.prototype.__renderBlock = _renderBlock2.default;
-docblockToMarkdown.prototype.__renderTag = _renderTag2.default;
+DocblockJsonToMarkdown.prototype.jsonToMarkdown = _jsonToMarkdown2.default;
+DocblockJsonToMarkdown.prototype.__renderBlock = _renderBlock2.default;
+DocblockJsonToMarkdown.prototype.__renderTag = _renderTag2.default;
 exports.default = _docblockJsonToMarkdown;
 module.exports = exports['default'];

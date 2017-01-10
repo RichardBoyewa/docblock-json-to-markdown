@@ -38,7 +38,7 @@ class DocblockJsonToMarkdown {
 		}
 	}
 }
-docblockToMarkdown.prototype.jsonToMarkdown = __jsonToMarkdown;
-docblockToMarkdown.prototype.__renderBlock = __renderBlock;
-docblockToMarkdown.prototype.__renderTag = __renderTag;
+DocblockJsonToMarkdown.prototype.jsonToMarkdown = __jsonToMarkdown;
+DocblockJsonToMarkdown.prototype.__renderBlock = __renderBlock;
+DocblockJsonToMarkdown.prototype.__renderTag = __renderTag;
 export default _docblockJsonToMarkdown;
