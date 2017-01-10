@@ -11,6 +11,7 @@ function head(data) {
 	});
 	if (!cls) return;
 	delete cls.name;
+	console.log(this);
 	var ret = [this._renderBlock(cls)];
 	return ret.join("\n");
 }

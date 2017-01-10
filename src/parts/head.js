@@ -5,6 +5,7 @@ export default function head(data) {
 	});
 	if ( ! cls) return;
 	delete cls.name;
+	console.log(this);
 	const ret = [
 		this._renderBlock(cls)
 	];
