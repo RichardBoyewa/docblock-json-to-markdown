@@ -5,15 +5,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = renderTag;
 
-var _settings = require('./settings');
+var _config = require('./config');
 
-var _settings2 = _interopRequireDefault(_settings);
+var _config2 = _interopRequireDefault(_config);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function renderTag(name, value) {
-	if (_settings2.default.tags[name] && name !== 'constructor') {
-		return _settings2.default.tags[name](value);
+	if (_config2.default.tags[name] && name !== 'constructor') {
+		return _config2.default.tags[name](value);
 	}
 	return '';
 }
