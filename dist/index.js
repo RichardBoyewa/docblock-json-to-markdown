@@ -32,7 +32,7 @@ function docblockJsonToMarkdown() {
 	(0, _setup2.default)(config);
 	// return api
 	return {
-		toMarkdown: _jsonToMarkdown2.default.bind(_this)
+		jsonToMarkdown: _jsonToMarkdown2.default.bind(_this)
 	};
 }
 docblockJsonToMarkdown.jsonToMarkdown = docblockJsonToMarkdown(_config2.default).jsonToMarkdown;

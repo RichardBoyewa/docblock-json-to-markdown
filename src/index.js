@@ -10,7 +10,7 @@ function docblockJsonToMarkdown(config = {}) {
 	__setup(config);
 	// return api
 	return {
-		toMarkdown : __jsonToMarkdown.bind(_this)
+		jsonToMarkdown : __jsonToMarkdown.bind(_this)
 	}
 }
 docblockJsonToMarkdown.jsonToMarkdown = docblockJsonToMarkdown(__config).jsonToMarkdown;
