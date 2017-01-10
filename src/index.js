@@ -2,7 +2,7 @@ import __jsonToMarkdown from './core/jsonToMarkdown';
 import __setup from './core/setup';
 import __config from './core/config';
 import _merge from 'lodash/merge';
-function docblockParserToMarkdown(config = {}) {
+function docblockJsonToMarkdown(config = {}) {
 	const _this = {
 		previousConfig : _merge({}, __config, config)
 	}
@@ -13,7 +13,7 @@ function docblockParserToMarkdown(config = {}) {
 		toMarkdown : __jsonToMarkdown.bind(_this)
 	}
 }
-docblockParserToMarkdown.toMarkdown = docblockParserToMarkdown(__config).toMarkdown;
-docblockParserToMarkdown.setup = __setup;
-docblockParserToMarkdown.config = __config;
-export default docblockParserToMarkdown;
+docblockJsonToMarkdown.jsonToMarkdown = docblockJsonToMarkdown(__config).jsonToMarkdown;
+docblockJsonToMarkdown.setup = __setup;
+docblockJsonToMarkdown.config = __config;
+export default docblockJsonToMarkdown;

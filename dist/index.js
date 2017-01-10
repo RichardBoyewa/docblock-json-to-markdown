@@ -22,7 +22,7 @@ var _merge3 = _interopRequireDefault(_merge2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function docblockParserToMarkdown() {
+function docblockJsonToMarkdown() {
 	var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
 	var _this = {
@@ -35,8 +35,8 @@ function docblockParserToMarkdown() {
 		toMarkdown: _jsonToMarkdown2.default.bind(_this)
 	};
 }
-docblockParserToMarkdown.toMarkdown = docblockParserToMarkdown(_config2.default).toMarkdown;
-docblockParserToMarkdown.setup = _setup2.default;
-docblockParserToMarkdown.config = _config2.default;
-exports.default = docblockParserToMarkdown;
+docblockJsonToMarkdown.jsonToMarkdown = docblockJsonToMarkdown(_config2.default).jsonToMarkdown;
+docblockJsonToMarkdown.setup = _setup2.default;
+docblockJsonToMarkdown.config = _config2.default;
+exports.default = docblockJsonToMarkdown;
 module.exports = exports['default'];
