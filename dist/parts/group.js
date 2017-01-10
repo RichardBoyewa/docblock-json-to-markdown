@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = group;
 
-var _renderBlock = require("../code/renderBlock");
+var _renderBlock = require("../core/renderBlock");
 
 var _renderBlock2 = _interopRequireDefault(_renderBlock);
 

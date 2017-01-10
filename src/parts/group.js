@@ -1,4 +1,4 @@
-import __renderBlock from '../code/renderBlock';
+import __renderBlock from '../core/renderBlock';
 export default function group(blocks, settings = {}) {
 	if ( ! blocks.length) return;
 	const ret = [];
