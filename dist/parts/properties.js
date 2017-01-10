@@ -1,17 +1,12 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 exports.default = properties;
-
-var _renderBlock = require('../core/renderBlock');
-
-var _renderBlock2 = _interopRequireDefault(_renderBlock);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function properties(data) {
+	var _this = this;
+
 	var settings = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
 	// if is a class
@@ -20,13 +15,13 @@ function properties(data) {
 	});
 	if (!props.length) return;
 
-	var ret = ['\n## ' + (settings.title || 'Properties') + '\n'];
+	var ret = ["\n## " + (settings.title || 'Properties') + "\n"];
 	if (settings.description) {
 		ret.push(settings.description);
 	}
 	props.forEach(function (prop) {
-		ret.push((0, _renderBlock2.default)(prop));
+		ret.push(_this._renderBlock(prop));
 	});
 	return ret.join("\n");
 }
-module.exports = exports['default'];
+module.exports = exports["default"];

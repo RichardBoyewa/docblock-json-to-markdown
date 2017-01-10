@@ -1,5 +1,3 @@
-import __renderBlock from '../core/renderBlock'
-
 export default function constr(data) {
 	const constr = data.find((block) => {
 		return block.constructor === true;
@@ -10,7 +8,7 @@ export default function constr(data) {
 	if ( ! constr) return;
 	const ret = [
 		'## Constructor',
-		__renderBlock(constr)
+		this._renderBlock(constr)
 	];
 	return ret.join("\n");
 }

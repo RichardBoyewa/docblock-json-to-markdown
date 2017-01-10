@@ -1,4 +1,3 @@
-import __renderTag from './renderTag'
 export default function renderBlock(block) {
 	// mark the block as done
 	if (block._done) return;
@@ -7,7 +6,7 @@ export default function renderBlock(block) {
 	const ret = [];
 	for (let key in block) {
 		const value = block[key];
-		const tagRendered = __renderTag(key, value);
+		const tagRendered = this._renderTag(key, value);
 		if ( ! tagRendered) continue;
 		if (key === 'name') {
 			ret.unshift(tagRendered);

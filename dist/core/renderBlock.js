@@ -1,16 +1,9 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 exports.default = renderBlock;
-
-var _renderTag = require('./renderTag');
-
-var _renderTag2 = _interopRequireDefault(_renderTag);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function renderBlock(block) {
 	// mark the block as done
 	if (block._done) return;
@@ -19,7 +12,7 @@ function renderBlock(block) {
 	var ret = [];
 	for (var key in block) {
 		var value = block[key];
-		var tagRendered = (0, _renderTag2.default)(key, value);
+		var tagRendered = this._renderTag(key, value);
 		if (!tagRendered) continue;
 		if (key === 'name') {
 			ret.unshift(tagRendered);
@@ -29,4 +22,4 @@ function renderBlock(block) {
 	}
 	return ret.join("\n");
 }
-module.exports = exports['default'];
+module.exports = exports["default"];

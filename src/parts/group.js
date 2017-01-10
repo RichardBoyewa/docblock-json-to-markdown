@@ -1,4 +1,3 @@
-import __renderBlock from '../core/renderBlock';
 export default function group(blocks, settings = {}) {
 	if ( ! blocks.length) return;
 	const ret = [];
@@ -9,7 +8,7 @@ export default function group(blocks, settings = {}) {
 		ret.push(settings.description);
 	}
 	blocks.forEach((block) => {
-		ret.push(__renderBlock(block));
+		ret.push(this._renderBlock(block));
 	});
 	return ret.join("\n");
 }

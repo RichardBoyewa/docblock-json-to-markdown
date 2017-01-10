@@ -1,4 +1,3 @@
-import __renderBlock from '../core/renderBlock'
 export default function methods(data, settings = {}) {
 	// if is a class
 	const methods = data.filter((block) => {
@@ -11,7 +10,7 @@ export default function methods(data, settings = {}) {
 		ret.push(settings.description);
 	}
 	methods.forEach((method) => {
-		ret.push(__renderBlock(method));
+		ret.push(this._renderBlock(method));
 	});
 	return ret.join("\n");
 }

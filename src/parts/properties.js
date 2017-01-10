@@ -1,4 +1,3 @@
-import __renderBlock from '../core/renderBlock'
 export default function properties(data, settings = {}) {
 	// if is a class
 	const props = data.filter((block) => {
@@ -11,7 +10,7 @@ export default function properties(data, settings = {}) {
 		ret.push(settings.description);
 	}
 	props.forEach((prop) => {
-		ret.push(__renderBlock(prop));
+		ret.push(this._renderBlock(prop));
 	});
 	return ret.join("\n");
 }

@@ -1,4 +1,3 @@
-import __renderBlock from '../core/renderBlock'
 export default function head(data) {
 	// if is a class
 	const cls = data.find((block) => {
@@ -7,7 +6,7 @@ export default function head(data) {
 	if ( ! cls) return;
 	delete cls.name;
 	const ret = [
-		__renderBlock(cls)
+		this._renderBlock(cls)
 	];
 	return ret.join("\n");
 }
