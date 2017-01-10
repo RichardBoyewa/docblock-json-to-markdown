@@ -36,9 +36,9 @@ class DocblockJsonToMarkdown {
 		for(let key in this._config.templates) {
 			this._config.templates[key] = this._config.templates[key].bind(this);
 		}
+		this._renderBlock = __renderBlock.bind(this);
+		this._renderTag = __renderTag.bind(this);
+		this.jsonToMarkdown = __jsonToMarkdown.bind(this);
 	}
 }
-DocblockJsonToMarkdown.prototype.jsonToMarkdown = __jsonToMarkdown;
-DocblockJsonToMarkdown.prototype.__renderBlock = __renderBlock;
-DocblockJsonToMarkdown.prototype.__renderTag = __renderTag;
 export default _docblockJsonToMarkdown;

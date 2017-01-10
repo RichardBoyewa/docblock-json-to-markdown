@@ -67,10 +67,10 @@ var DocblockJsonToMarkdown = function DocblockJsonToMarkdown() {
 	for (var _key2 in this._config.templates) {
 		this._config.templates[_key2] = this._config.templates[_key2].bind(this);
 	}
+	this._renderBlock = _renderBlock2.default.bind(this);
+	this._renderTag = _renderTag2.default.bind(this);
+	this.jsonToMarkdown = _jsonToMarkdown2.default.bind(this);
 };
 
-DocblockJsonToMarkdown.prototype.jsonToMarkdown = _jsonToMarkdown2.default;
-DocblockJsonToMarkdown.prototype.__renderBlock = _renderBlock2.default;
-DocblockJsonToMarkdown.prototype.__renderTag = _renderTag2.default;
 exports.default = _docblockJsonToMarkdown;
 module.exports = exports['default'];
