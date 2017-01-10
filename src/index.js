@@ -3,23 +3,6 @@ import __renderBlock from './core/renderBlock';
 import __renderTag from './core/renderTag';
 import __config from './core/config';
 import _merge from 'lodash/merge';
-// function docblockJsonToMarkdown(config = {}) {
-// 	const _this = {
-// 		previousConfig : _merge({}, __config, config)
-// 	}
-// 	// extend config
-// 	__setup(config);
-// 	// return api
-// 	return {
-// 		jsonToMarkdown : __jsonToMarkdown.bind(_this)
-// 	}
-// }
-// docblockJsonToMarkdown.jsonToMarkdown = docblockJsonToMarkdown(__config).jsonToMarkdown;
-// docblockJsonToMarkdown.setup = __setup;
-// docblockJsonToMarkdown.config = __config;
-// export default docblockJsonToMarkdown;
-
-
 function _docblockJsonToMarkdown(config = {}) {
 	return new DocblockJsonToMarkdown(config);
 }

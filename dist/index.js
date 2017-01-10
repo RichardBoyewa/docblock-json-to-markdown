@@ -28,23 +28,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-// function docblockJsonToMarkdown(config = {}) {
-// 	const _this = {
-// 		previousConfig : _merge({}, __config, config)
-// 	}
-// 	// extend config
-// 	__setup(config);
-// 	// return api
-// 	return {
-// 		jsonToMarkdown : __jsonToMarkdown.bind(_this)
-// 	}
-// }
-// docblockJsonToMarkdown.jsonToMarkdown = docblockJsonToMarkdown(__config).jsonToMarkdown;
-// docblockJsonToMarkdown.setup = __setup;
-// docblockJsonToMarkdown.config = __config;
-// export default docblockJsonToMarkdown;
-
-
 function _docblockJsonToMarkdown() {
 	var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
