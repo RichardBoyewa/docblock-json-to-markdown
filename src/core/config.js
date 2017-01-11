@@ -18,6 +18,7 @@ import __seeTag from '../tags/see'
 import __defaultTemplate from '../templates/default'
 
 export default {
+	language : 'js',
 	tags : {
 		class : __classTag,
 		example : __exampleTag,

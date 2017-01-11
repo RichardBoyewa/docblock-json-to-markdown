@@ -71,6 +71,7 @@ var _default4 = _interopRequireDefault(_default3);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
+	language: 'js',
 	tags: {
 		class: _class2.default,
 		example: _example2.default,
