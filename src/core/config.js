@@ -16,6 +16,7 @@ import __defaultTag from '../tags/default'
 import __seeTag from '../tags/see'
 
 import __defaultTemplate from '../templates/default'
+import __scssTemplate from '../templates/scss'
 
 export default {
 	language : 'js',
@@ -39,6 +40,7 @@ export default {
 		methods : __methodsPart
 	},
 	templates : {
-		default : __defaultTemplate
+		default : __defaultTemplate,
+		scss : __scssTemplate
 	}
 }

@@ -68,6 +68,10 @@ var _default3 = require('../templates/default');
 
 var _default4 = _interopRequireDefault(_default3);
 
+var _scss = require('../templates/scss');
+
+var _scss2 = _interopRequireDefault(_scss);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
@@ -92,7 +96,8 @@ exports.default = {
 		methods: _methods2.default
 	},
 	templates: {
-		default: _default4.default
+		default: _default4.default,
+		scss: _scss2.default
 	}
 };
 module.exports = exports['default'];
