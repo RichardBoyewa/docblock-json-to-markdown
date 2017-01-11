@@ -5,6 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = ret;
 function ret(ret) {
-	return "Return **" + ret.type + "** " + ret.description + "\n";
+	return "Return **" + this._renderTypes(ret.type) + "** " + ret.description + "\n";
 }
 module.exports = exports["default"];

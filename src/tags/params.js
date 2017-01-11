@@ -7,7 +7,7 @@ export default function params(params) {
 		${params.map((param) => {
 			let optional = ( ! param.optional) ? 'required' : 'optional';
 			let def = param.default || '';
-			return `${param.name}  |  **${param.type}**  |  ${param.description}  |  ${optional}  |  ${def}`;
+			return `${param.name}  |  **${this._renderTypes(param.types)}**  |  ${param.description}  |  ${optional}  |  ${def}`;
 		}).join("\n")}
 	`);
 }

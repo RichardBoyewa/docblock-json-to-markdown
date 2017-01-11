@@ -1,6 +1,7 @@
 import __jsonToMarkdown from './core/jsonToMarkdown';
 import __renderBlock from './core/renderBlock';
 import __renderTag from './core/renderTag';
+import __renderTypes from './utils/renderTypes';
 import __config from './core/config';
 import _merge from 'lodash/merge';
 function _docblockJsonToMarkdown(config = {}) {
@@ -21,6 +22,7 @@ class DocblockJsonToMarkdown {
 		}
 		this._renderBlock = __renderBlock.bind(this);
 		this._renderTag = __renderTag.bind(this);
+		this._renderTypes = __renderTypes.bind(this);
 		this.jsonToMarkdown = __jsonToMarkdown.bind(this);
 	}
 }

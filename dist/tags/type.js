@@ -5,6 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = type;
 function type(type) {
-	return "Type : **" + type + "**\n";
+	return "Type : **" + this._renderTypes(type) + "**\n";
 }
 module.exports = exports["default"];

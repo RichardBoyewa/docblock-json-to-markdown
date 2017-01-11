@@ -1,3 +1,3 @@
 export default function ret(ret) {
-	return `Return **${ret.type}** ${ret.description}\n`;
+	return `Return **${this._renderTypes(ret.type)}** ${ret.description}\n`;
 }
