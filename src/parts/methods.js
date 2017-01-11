@@ -1,7 +1,7 @@
 export default function methods(data, settings = {}) {
 	// if is a class
 	const methods = data.filter((block) => {
-		return ! block.class && ! block.private && block.constructor !== true && ! block.type;
+		return ! block.class && ! block.private && ! block.protected && block.constructor !== true && ! block.type && ! block.styleguide;
 	});
 	if ( ! methods.length) return;
 

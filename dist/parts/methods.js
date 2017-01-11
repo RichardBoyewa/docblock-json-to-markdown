@@ -11,7 +11,7 @@ function methods(data) {
 
 	// if is a class
 	var methods = data.filter(function (block) {
-		return !block.class && !block.private && block.constructor !== true && !block.type;
+		return !block.class && !block.private && !block.protected && block.constructor !== true && !block.type && !block.styleguide;
 	});
 	if (!methods.length) return;
 
