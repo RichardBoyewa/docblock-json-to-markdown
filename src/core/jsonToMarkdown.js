@@ -3,5 +3,5 @@ export default function jsonToMarkdown(json) {
 	const template = this._config.templates.default;
 	const tpl = template(json);
 	// return markdown
-	return tpl;
+	return tpl.trim();
 }

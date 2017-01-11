@@ -9,6 +9,6 @@ function jsonToMarkdown(json) {
 	var template = this._config.templates.default;
 	var tpl = template(json);
 	// return markdown
-	return tpl;
+	return tpl.trim();
 }
 module.exports = exports["default"];
