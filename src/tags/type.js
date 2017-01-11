@@ -1,3 +1,3 @@
-export default function type(type) {
-	return `Type : **${this._renderTypes(type)}**\n`;
+export default function type(types) {
+	return `Type : **${this._renderTypes(types)}**\n`;
 }
