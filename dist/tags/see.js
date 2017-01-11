@@ -5,6 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = see;
 function see(see) {
-	return "[" + see.url + "](" + see.label + ")";
+	return see.label + " : [" + see.url + "](" + see.url + ")";
 }
 module.exports = exports["default"];
