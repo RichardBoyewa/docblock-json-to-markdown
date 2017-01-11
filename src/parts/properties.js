@@ -1,7 +1,7 @@
 export default function properties(data, settings = {}) {
 	// if is a class
 	const props = data.filter((block) => {
-		return ( block.type && ! block.private);
+		return ( block.type && ! block.private && ! block.protected);
 	});
 	if ( ! props.length) return;
 

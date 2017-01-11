@@ -11,7 +11,7 @@ function properties(data) {
 
 	// if is a class
 	var props = data.filter(function (block) {
-		return block.type && !block.private;
+		return block.type && !block.private && !block.protected;
 	});
 	if (!props.length) return;
 
