@@ -5,6 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = author;
 function author(author) {
-	return "Author : " + author;
+	return "Author : " + author + "\n";
 }
 module.exports = exports["default"];

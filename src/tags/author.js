@@ -1,3 +1,3 @@
 export default function author(author) {
-	return `Author : ${author}`;
+	return `Author : ${author}\n`;
 }
