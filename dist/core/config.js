@@ -48,9 +48,9 @@ var _params = require('../tags/params');
 
 var _params2 = _interopRequireDefault(_params);
 
-var _type = require('../tags/type');
+var _types = require('../tags/types');
 
-var _type2 = _interopRequireDefault(_type);
+var _types2 = _interopRequireDefault(_types);
 
 var _return = require('../tags/return');
 
@@ -83,7 +83,8 @@ exports.default = {
 		name: _name2.default,
 		body: _body2.default,
 		params: _params2.default,
-		type: _type2.default,
+		type: _types2.default,
+		types: _types2.default,
 		return: _return2.default,
 		default: _default2.default,
 		see: _see2.default
