@@ -1,7 +1,7 @@
 export default function defaultTemplate(data) {
 	return [
 		this._config.parts.group(data.filter((block) => {
-			return block.class === true;
+			return block.class !== undefined;
 		}), {
 			title : 'Class'
 		}),
@@ -23,14 +23,14 @@ export default function defaultTemplate(data) {
 			description : "Here's the list of available settings."
 		}),
 		this._config.parts.group(data.filter((block) => {
-			return block.type && ! block.private && ! block.protected;
+			return block.type !== undefined && ! block.private && ! block.protected;
 		}), {
 			title : 'Properties'
 		}),
 		this._config.parts.group(data.filter((block) => {
 			return ! block.type && ! block.private && ! block.protected;
 		}), {
-			title : 'Properties'
+			title : 'Methods'
 		})
 	].join("\n");
 }
