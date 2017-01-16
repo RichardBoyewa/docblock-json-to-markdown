@@ -20,8 +20,9 @@
   "author": "Coffeekraken <hello@coffeekraken.io>",
   "license": "MIT",
   "dependencies": {
-    "trim-lines": "^1.1.0",
-    "lodash": "^4.17.2"
+    "js-beautify": "^1.6.8",
+    "lodash": "^4.17.2",
+    "trim-lines": "^1.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",

@@ -5,7 +5,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = defaultTemplate;
 function defaultTemplate(data) {
-	return [this._config.parts.head(data), this._config.parts.constructor(data), this._config.parts.group(data.filter(function (block) {
+	return [this._config.parts.group(data.filter(function (block) {
+		return block.class === true;
+	}), {
+		title: 'Class'
+	}), this._config.parts.group(data.filter(function (block) {
+		return block.constructor === true;
+	}), {
+		title: 'Constructor'
+	}), this._config.parts.group(data.filter(function (block) {
 		return block.styleguide;
 	}), {
 		title: 'Examples',
@@ -15,6 +23,14 @@ function defaultTemplate(data) {
 	}), {
 		title: 'Settings',
 		description: "Here's the list of available settings."
-	}), this._config.parts.properties(data), this._config.parts.methods(data)].join("\n");
+	}), this._config.parts.group(data.filter(function (block) {
+		return block.type && !block.private && !block.protected;
+	}), {
+		title: 'Properties'
+	}), this._config.parts.group(data.filter(function (block) {
+		return !block.type && !block.private && !block.protected;
+	}), {
+		title: 'Properties'
+	})].join("\n");
 }
 module.exports = exports['default'];

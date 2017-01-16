@@ -4,25 +4,9 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _head = require('../parts/head');
-
-var _head2 = _interopRequireDefault(_head);
-
-var _constructor = require('../parts/constructor');
-
-var _constructor2 = _interopRequireDefault(_constructor);
-
 var _group = require('../parts/group');
 
 var _group2 = _interopRequireDefault(_group);
-
-var _methods = require('../parts/methods');
-
-var _methods2 = _interopRequireDefault(_methods);
-
-var _properties = require('../parts/properties');
-
-var _properties2 = _interopRequireDefault(_properties);
 
 var _class = require('../tags/class');
 
@@ -90,11 +74,7 @@ exports.default = {
 		see: _see2.default
 	},
 	parts: {
-		head: _head2.default,
-		constructor: _constructor2.default,
-		group: _group2.default,
-		properties: _properties2.default,
-		methods: _methods2.default
+		group: _group2.default
 	},
 	templates: {
 		default: _default4.default,

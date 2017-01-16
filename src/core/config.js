@@ -1,8 +1,4 @@
-import __headPart from '../parts/head';
-import __constructorPart from '../parts/constructor'
 import __groupPart from '../parts/group'
-import __methodsPart from '../parts/methods'
-import __propertiesPart from '../parts/properties'
 
 import __classTag from '../tags/class'
 import __exampleTag from '../tags/example'
@@ -34,11 +30,7 @@ export default {
 		see : __seeTag
 	},
  	parts : {
-		head : __headPart,
-		constructor : __constructorPart,
-		group : __groupPart,
-		properties : __propertiesPart,
-		methods : __methodsPart
+		group : __groupPart
 	},
 	templates : {
 		default : __defaultTemplate,

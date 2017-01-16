@@ -9,6 +9,9 @@ function group(blocks) {
 
 	var settings = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
+	blocks = blocks.filter(function (block) {
+		return !block._done;
+	});
 	if (!blocks.length) return;
 	var ret = [];
 	if (settings.title) {

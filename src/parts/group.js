@@ -1,4 +1,7 @@
 export default function group(blocks, settings = {}) {
+	blocks = blocks.filter((block) => {
+		return ! block._done;
+	});
 	if ( ! blocks.length) return;
 	const ret = [];
 	if (settings.title) {
