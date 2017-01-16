@@ -3,6 +3,16 @@ export default function group(blocks, settings = {}) {
 		return ! block._done;
 	});
 	if ( ! blocks.length) return;
+	// handle doNotRender
+	if (settings.doNotRender) {
+		settings.doNotRender.forEach((doNotRenderProperty) => {
+			blocks.forEach((block) => {
+				settings.doNotRender.forEach((property) => {
+					delete block[property];
+				});
+			});
+		});
+	}
 	const ret = [];
 	if (settings.title) {
 		ret.push(`\n## ${settings.title}\n`);

@@ -8,7 +8,7 @@ function defaultTemplate(data) {
 	return [this._config.parts.group(data.filter(function (block) {
 		return block.class !== undefined;
 	}), {
-		title: 'Class'
+		doNotRender: ['name']
 	}), this._config.parts.group(data.filter(function (block) {
 		return block.constructor === true;
 	}), {

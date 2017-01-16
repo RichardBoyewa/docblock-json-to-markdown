@@ -3,7 +3,7 @@ export default function defaultTemplate(data) {
 		this._config.parts.group(data.filter((block) => {
 			return block.class !== undefined;
 		}), {
-			title : 'Class'
+			doNotRender : ['name']
 		}),
 		this._config.parts.group(data.filter((block) => {
 			return block.constructor === true;
@@ -23,7 +23,7 @@ export default function defaultTemplate(data) {
 			description : "Here's the list of available settings."
 		}),
 		this._config.parts.group(data.filter((block) => {
-			return block.type !== undefined && ! block.private && ! block.protected;
+			return ! block.return && block.type !== undefined && ! block.private && ! block.protected;
 		}), {
 			title : 'Properties'
 		}),

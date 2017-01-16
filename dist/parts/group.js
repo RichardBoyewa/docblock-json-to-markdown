@@ -13,6 +13,16 @@ function group(blocks) {
 		return !block._done;
 	});
 	if (!blocks.length) return;
+	// handle doNotRender
+	if (settings.doNotRender) {
+		settings.doNotRender.forEach(function (doNotRenderProperty) {
+			blocks.forEach(function (block) {
+				settings.doNotRender.forEach(function (property) {
+					delete block[property];
+				});
+			});
+		});
+	}
 	var ret = [];
 	if (settings.title) {
 		ret.push("\n## " + settings.title + "\n");
