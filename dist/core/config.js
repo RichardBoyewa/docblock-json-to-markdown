@@ -119,6 +119,14 @@ exports.default = {
 			Promise: 'https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise',
 			Proxy: 'https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Proxy',
 			RegExp: 'https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/RegExp'
+		},
+		scss: {
+			List: 'http://www.sass-lang.com/documentation/file.SASS_REFERENCE.html#lists',
+			String: 'http://www.sass-lang.com/documentation/file.SASS_REFERENCE.html#sass-script-strings',
+			Map: 'http://www.sass-lang.com/documentation/file.SASS_REFERENCE.html#maps',
+			Color: 'http://www.sass-lang.com/documentation/file.SASS_REFERENCE.html#colors',
+			Function: 'http://www.sass-lang.com/documentation/file.SASS_REFERENCE.html#functions',
+			Mixin: 'http://www.sass-lang.com/documentation/file.SASS_REFERENCE.html#mixins'
 		}
 	}
 };

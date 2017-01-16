@@ -8,13 +8,11 @@ function scssTemplate(data) {
 	return [this._config.parts.head(data), this._config.parts.group(data.filter(function (block) {
 		return block.mixin === true;
 	}), {
-		title: 'Mixins',
-		description: "Here's the list of available mixins."
+		title: 'Mixins'
 	}), this._config.parts.group(data.filter(function (block) {
 		return block.function === true;
 	}), {
-		title: 'Functions',
-		description: "Here's the list of available functions."
+		title: 'Functions'
 	})].join("\n");
 }
 module.exports = exports['default'];

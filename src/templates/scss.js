@@ -4,14 +4,12 @@ export default function scssTemplate(data) {
 		this._config.parts.group(data.filter((block) => {
 			return block.mixin === true;
 		}), {
-			title : 'Mixins',
-			description : "Here's the list of available mixins."
+			title : 'Mixins'
 		}),
 		this._config.parts.group(data.filter((block) => {
 			return block.function === true;
 		}), {
-			title : 'Functions',
-			description : "Here's the list of available functions."
+			title : 'Functions'
 		})
 	].join("\n");
 }
