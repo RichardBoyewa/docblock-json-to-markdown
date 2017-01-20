@@ -2,7 +2,6 @@ export default function group(blocks, settings = {}) {
 	blocks = blocks.filter((block) => {
 		return ! block._done;
 	});
-	console.log(blocks);
 	if ( ! blocks.length) return;
 	// handle doNotRender
 	if (settings.doNotRender) {
