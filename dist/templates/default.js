@@ -15,12 +15,17 @@ function defaultTemplate(data) {
 		doNotRender: ['name'],
 		title: 'Constructor'
 	}), this._config.parts.group(data.filter(function (block) {
-		return block.styleguide;
+		return block.styleguide !== undefined;
 	}), {
 		title: 'Examples',
 		description: "Here's some usage examples."
 	}), this._config.parts.group(data.filter(function (block) {
-		return block.setting === true;
+		return block.prop !== undefined;
+	}), {
+		title: 'Attributes',
+		description: "Here's the list of available attribute to set on the element."
+	}), this._config.parts.group(data.filter(function (block) {
+		return block.setting !== undefined;
 	}), {
 		title: 'Settings',
 		description: "Here's the list of available settings."
