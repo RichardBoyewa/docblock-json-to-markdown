@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = scssTemplate;
 function scssTemplate(data) {
 	return [this._config.parts.group(data.filter(function (block) {
-		return block.mixin !== true || block.function !== true;
+		return block.mixin !== true && block.function !== true && !block.styleguide;
 	})), this._config.parts.group(data.filter(function (block) {
 		return block.mixin === true;
 	}), {
