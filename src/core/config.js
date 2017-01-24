@@ -2,6 +2,7 @@ import __groupPart from '../parts/group'
 
 import __classTag from '../tags/class'
 import __exampleTag from '../tags/example'
+import __extendsTag from '../tags/extends'
 import __authorTag from '../tags/author'
 import __nameTag from '../tags/name'
 import __bodyTag from '../tags/body'
@@ -11,14 +12,16 @@ import __returnTag from '../tags/return'
 import __defaultTag from '../tags/default'
 import __seeTag from '../tags/see'
 
+
 import __defaultTemplate from '../templates/default'
 import __scssTemplate from '../templates/scss'
 
 export default {
 	language : 'js',
 	tags : {
-		class : __classTag,
+		// class : __classTag,
 		example : __exampleTag,
+		extends : __extendsTag,
 		author : __authorTag,
 		name : __nameTag,
 		body : __bodyTag,

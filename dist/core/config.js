@@ -16,6 +16,10 @@ var _example = require('../tags/example');
 
 var _example2 = _interopRequireDefault(_example);
 
+var _extends = require('../tags/extends');
+
+var _extends2 = _interopRequireDefault(_extends);
+
 var _author = require('../tags/author');
 
 var _author2 = _interopRequireDefault(_author);
@@ -61,8 +65,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = {
 	language: 'js',
 	tags: {
-		class: _class2.default,
+		// class : __classTag,
 		example: _example2.default,
+		extends: _extends2.default,
 		author: _author2.default,
 		name: _name2.default,
 		body: _body2.default,

@@ -5,9 +5,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = defaultTemplate;
 function defaultTemplate(data) {
-	return [this._config.parts.group(data.filter(function (block) {
-		return block.class !== undefined;
+	return [this._config.parts.group(data.filter(function (block, index) {
+		return index === 0 && block.name && block.constructor !== true && !block.styleguide && !block.prop && !block.setting && !block.return && !block.types && !block.private && !block.protected;
 	}), {
+		title: '@[0].name',
+		titleLevelAdd: 1,
 		doNotRender: ['name']
 	}), this._config.parts.group(data.filter(function (block) {
 		return block.constructor === true;

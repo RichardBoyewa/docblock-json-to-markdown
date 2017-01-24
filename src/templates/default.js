@@ -1,8 +1,10 @@
 export default function defaultTemplate(data) {
 	return [
-		this._config.parts.group(data.filter((block) => {
-			return block.class !== undefined;
+		this._config.parts.group(data.filter((block, index) => {
+			return index === 0 && block.name && block.constructor !== true && ! block.styleguide && ! block.prop && ! block.setting && ! block.return && ! block.types && ! block.private && ! block.protected;
 		}), {
+			title : '@[0].name',
+			titleLevelAdd : 1,
 			doNotRender : ['name']
 		}),
 		this._config.parts.group(data.filter((block) => {

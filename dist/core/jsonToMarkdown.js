@@ -5,6 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = jsonToMarkdown;
 function jsonToMarkdown(json) {
+	// reset title level between files processing
+	// (this title level management has to be rewriten when possible)
+	this._titleLevel(-100);
 	// template
 	var template = this._config.templates[this._config.language] || this._config.templates.default;
 	var tpl = template(json);
