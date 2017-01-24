@@ -8,14 +8,14 @@ export default function group(blocks, settings = {}) {
 
 	if (settings.title) {
 		if (settings.title.substr(0,1) === '@') {
-			ret.push(`\n## ${_get(blocks, settings.title.substr(1))}\n`);
+			ret.push(`\n${Array(this._titleLevel()+1).join('#')} ${_get(blocks, settings.title.substr(1))}\n`);
 		} else {
-			ret.push(`\n## ${settings.title}\n`);
+			ret.push(`\n${Array(this._titleLevel()+1).join('#')} ${settings.title}\n`);
 		}
 	}
 	if (settings.description) {
 		if (settings.description.substr(0,1) === '@') {
-			ret.push(`\n## ${_get(blocks, settings.description.substr(1))}\n`);
+			ret.push(`${_get(blocks, settings.description.substr(1))}`);
 		} else {
 			ret.push(settings.description);
 		}
@@ -35,5 +35,12 @@ export default function group(blocks, settings = {}) {
 	blocks.forEach((block) => {
 		ret.push(this._renderBlock(block));
 	});
+
+	// if we have an titleLevelAdd in settings,
+	// increase the title level by this value
+	if (settings.titleLevelAdd) {
+		this._titleLevel(settings.titleLevelAdd);
+	}
+
 	return ret.join("\n");
 }

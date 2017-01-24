@@ -5,6 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = example;
 function example(example) {
-	return '#### Example\n```' + (example.language || '') + '\n\t' + example.body + '\n```';
+	return Array(this._titleLevel() + 1).join('#') + ' Example\n```' + (example.language || '') + '\n\t' + example.body + '\n```';
 }
 module.exports = exports['default'];

@@ -1,7 +1,7 @@
 import trimLine from 'trim-lines';
-export default function(cls) {
+export default function classTag(cls) {
 	return trimLine(`
-		# ${cls.name} ${cls.extends ? ` extends ${cls.extends}` : ''}
+		${Array(this._titleLevel()+1).join('#')} ${cls.name} ${cls.extends ? ` extends ${cls.extends}` : ''}
 		${cls.body || ''}
 	`);
 }

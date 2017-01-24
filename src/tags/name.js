@@ -1,3 +1,3 @@
 export default function name(name) {
-	return `\n### ${name}\n`;
+	return `\n${Array(this._titleLevel()+1).join('#')} ${name}\n`;
 }

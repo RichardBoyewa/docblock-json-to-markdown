@@ -4,6 +4,7 @@ export default function scssTemplate(data) {
 			return block.mixin !== true && block.function !== true && ! block.styleguide;
 		}), {
 			title : '@[0].name',
+			titleLevelAdd : 1,
 			doNotRender : ['name']
 		}),
 		this._config.parts.group(data.filter((block) => {
