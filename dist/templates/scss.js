@@ -7,7 +7,10 @@ exports.default = scssTemplate;
 function scssTemplate(data) {
 	return [this._config.parts.group(data.filter(function (block) {
 		return block.mixin !== true && block.function !== true && !block.styleguide;
-	})), this._config.parts.group(data.filter(function (block) {
+	}), {
+		title: '@[0].name',
+		doNotRender: ['name']
+	}), this._config.parts.group(data.filter(function (block) {
 		return block.mixin === true;
 	}), {
 		title: 'Mixins'

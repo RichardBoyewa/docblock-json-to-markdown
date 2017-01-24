@@ -1,9 +1,10 @@
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 exports.default = group;
+var _get = require('lodash/get');
 function group(blocks) {
 	var _this = this;
 
@@ -13,6 +14,23 @@ function group(blocks) {
 		return !block._done;
 	});
 	if (!blocks.length) return;
+	var ret = [];
+
+	if (settings.title) {
+		if (settings.title.substr(0, 1) === '@') {
+			ret.push('\n## ' + _get(blocks, settings.title.substr(1)) + '\n');
+		} else {
+			ret.push('\n## ' + settings.title + '\n');
+		}
+	}
+	if (settings.description) {
+		if (settings.description.substr(0, 1) === '@') {
+			ret.push('\n## ' + _get(blocks, settings.description.substr(1)) + '\n');
+		} else {
+			ret.push(settings.description);
+		}
+	}
+
 	// handle doNotRender
 	if (settings.doNotRender) {
 		settings.doNotRender.forEach(function (doNotRenderProperty) {
@@ -23,16 +41,10 @@ function group(blocks) {
 			});
 		});
 	}
-	var ret = [];
-	if (settings.title) {
-		ret.push("\n## " + settings.title + "\n");
-	}
-	if (settings.description) {
-		ret.push(settings.description);
-	}
+
 	blocks.forEach(function (block) {
 		ret.push(_this._renderBlock(block));
 	});
 	return ret.join("\n");
 }
-module.exports = exports["default"];
+module.exports = exports['default'];

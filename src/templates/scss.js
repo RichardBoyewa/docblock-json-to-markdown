@@ -2,7 +2,10 @@ export default function scssTemplate(data) {
 	return [
 		this._config.parts.group(data.filter((block) => {
 			return block.mixin !== true && block.function !== true && ! block.styleguide;
-		})),
+		}), {
+			title : '@[0].name',
+			doNotRender : ['name']
+		}),
 		this._config.parts.group(data.filter((block) => {
 			return block.mixin === true;
 		}), {
