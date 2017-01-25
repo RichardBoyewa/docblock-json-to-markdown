@@ -5,8 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = scssTemplate;
 function scssTemplate(data) {
-	return [this._config.parts.group(data.filter(function (block) {
-		return block.mixin !== true && block.function !== true && !block.styleguide;
+	return [this._config.parts.group(data.filter(function (block, index) {
+		return index === 0 && !block.styleguide;
 	}), {
 		title: '@[0].name',
 		titleLevelAdd: 1,

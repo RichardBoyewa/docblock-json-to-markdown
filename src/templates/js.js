@@ -1,4 +1,4 @@
-export default function defaultTemplate(data) {
+export default function jsTemplate(data) {
 	return [
 		this._config.parts.group(data.filter((block, index) => {
 			return index === 0 && block.name && ! block.styleguide && ! block.private && ! block.protected;

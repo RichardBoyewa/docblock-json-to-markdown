@@ -15,6 +15,7 @@ import __seeTag from '../tags/see'
 
 import __defaultTemplate from '../templates/default'
 import __scssTemplate from '../templates/scss'
+import __jsTemplate from '../templates/js'
 
 export default {
 	language : 'js',
@@ -37,7 +38,8 @@ export default {
 	},
 	templates : {
 		default : __defaultTemplate,
-		scss : __scssTemplate
+		scss : __scssTemplate,
+		js : __jsTemplate
 	},
 	types : {
 		js : {
