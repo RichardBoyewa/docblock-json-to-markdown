@@ -1,7 +1,7 @@
 export default function scssTemplate(data) {
 	return [
 		this._config.parts.group(data.filter((block, index) => {
-			return index === 0 && ! block.styleguide;
+			return index === 0;
 		}), {
 			title : '@[0].name',
 			titleLevelAdd : 1,
