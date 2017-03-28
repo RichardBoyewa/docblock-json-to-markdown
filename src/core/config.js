@@ -1,6 +1,5 @@
 import __groupPart from '../parts/group'
 
-import __classTag from '../tags/class'
 import __exampleTag from '../tags/example'
 import __extendsTag from '../tags/extends'
 import __authorTag from '../tags/author'
@@ -11,6 +10,7 @@ import __typesTag from '../tags/types'
 import __returnTag from '../tags/return'
 import __defaultTag from '../tags/default'
 import __seeTag from '../tags/see'
+import __staticTag from '../tags/static'
 
 
 import __defaultTemplate from '../templates/default'
@@ -20,7 +20,6 @@ import __jsTemplate from '../templates/js'
 export default {
 	language : 'js',
 	tags : {
-		// class : __classTag,
 		example : __exampleTag,
 		extends : __extendsTag,
 		author : __authorTag,
@@ -31,7 +30,8 @@ export default {
 		types : __typesTag,
 		return : __returnTag,
 		default : __defaultTag,
-		see : __seeTag
+		see : __seeTag,
+		static : __staticTag
 	},
  	parts : {
 		group : __groupPart

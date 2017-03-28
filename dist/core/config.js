@@ -8,10 +8,6 @@ var _group = require('../parts/group');
 
 var _group2 = _interopRequireDefault(_group);
 
-var _class = require('../tags/class');
-
-var _class2 = _interopRequireDefault(_class);
-
 var _example = require('../tags/example');
 
 var _example2 = _interopRequireDefault(_example);
@@ -52,6 +48,10 @@ var _see = require('../tags/see');
 
 var _see2 = _interopRequireDefault(_see);
 
+var _static = require('../tags/static');
+
+var _static2 = _interopRequireDefault(_static);
+
 var _default3 = require('../templates/default');
 
 var _default4 = _interopRequireDefault(_default3);
@@ -69,7 +69,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = {
 	language: 'js',
 	tags: {
-		// class : __classTag,
 		example: _example2.default,
 		extends: _extends2.default,
 		author: _author2.default,
@@ -80,7 +79,8 @@ exports.default = {
 		types: _types2.default,
 		return: _return2.default,
 		default: _default2.default,
-		see: _see2.default
+		see: _see2.default,
+		static: _static2.default
 	},
 	parts: {
 		group: _group2.default
