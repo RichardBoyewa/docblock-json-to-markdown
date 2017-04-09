@@ -1,8 +1,8 @@
 # Coffeekraken Docblock JSON to Markdown <img src=".resources/coffeekraken-logo.jpg" height="25px" />
 
 <p>
-	<a href="https://travis-ci.org/coffeekraken/docblock-json-to-markdown">
-		<img src="https://img.shields.io/travis/coffeekraken/docblock-json-to-markdown.svg?style=flat-square" />
+	<a href="https://travis-ci.org/Coffeekraken/docblock-json-to-markdown">
+		<img src="https://img.shields.io/travis/Coffeekraken/docblock-json-to-markdown.svg?style=flat-square" />
 	</a>
 	<a href="https://www.npmjs.com/package/coffeekraken-docblock-json-to-markdown">
 		<img src="https://img.shields.io/npm/v/coffeekraken-docblock-json-to-markdown.svg?style=flat-square" />
