@@ -6,7 +6,7 @@
   "scripts": {
     "dist": "babel src -d dist",
     "dist.watch": "nodemon -w src -e js -x \"npm run dist\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "coffeekraken-testing-stack"
   },
   "keywords": [
     "docblock",
@@ -34,7 +34,8 @@
     "babel-preset-es2015-node": "^6.1.1",
     "babel-preset-stage-0": "^6.16.0",
     "coffeekraken-compile-server": "https://github.com/Coffeekraken/compile-server.git#release/0.0.1",
-    "coffeekraken-docblock-parser": "https://github.com:Coffeekraken/docblock-parser.git#release/0.0.1",
+    "coffeekraken-docblock-parser": "https://github.com/Coffeekraken/docblock-parser.git#release/0.0.1",
+    "coffeekraken-testing-stack": "https://github.com/Coffeekraken/testing-stack.git#release/0.0.1",
     "concurrently": "^3.1.0",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
