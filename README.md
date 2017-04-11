@@ -22,6 +22,9 @@
 	<a href="https://twitter.com/coffeekrakenio">
 		<img src="https://img.shields.io/twitter/url/http/coffeekrakenio.svg?style=social&style=flat-square" />
 	</a>
+	<a href="http://coffeekraken.io">
+		<img src="https://img.shields.io/twitter/url/http/shields.io.svg?style=flat-square&label=coffeekraken.io&colorB=f2bc2b&style=flat-square" />
+	</a>
 </p>
 
 This package gives you the ability transform with ease a coffeekraken-docblock-parser resulting JSON into a beautiful markdown file.
