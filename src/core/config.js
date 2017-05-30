@@ -35,9 +35,6 @@ export default {
 		static : __staticTag,
 		values : __valuesTag
 	},
- 	parts : {
-		group : __groupPart
-	},
 	templates : {
 		default : __defaultTemplate,
 		scss : __scssTemplate,

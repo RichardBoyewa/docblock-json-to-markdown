@@ -1,5 +1,5 @@
 const _get = require('lodash/get');
-export default function group(blocks, settings = {}) {
+export default function renderBlocks(blocks, settings = {}) {
 	blocks = blocks.filter((block) => {
 		return ! block._done;
 	});
