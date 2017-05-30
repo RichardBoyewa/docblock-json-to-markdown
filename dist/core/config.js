@@ -52,6 +52,10 @@ var _static = require('../tags/static');
 
 var _static2 = _interopRequireDefault(_static);
 
+var _values = require('../tags/values');
+
+var _values2 = _interopRequireDefault(_values);
+
 var _default3 = require('../templates/default');
 
 var _default4 = _interopRequireDefault(_default3);
@@ -80,7 +84,8 @@ exports.default = {
 		return: _return2.default,
 		default: _default2.default,
 		see: _see2.default,
-		static: _static2.default
+		static: _static2.default,
+		values: _values2.default
 	},
 	parts: {
 		group: _group2.default

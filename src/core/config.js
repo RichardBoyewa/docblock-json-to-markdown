@@ -11,6 +11,7 @@ import __returnTag from '../tags/return'
 import __defaultTag from '../tags/default'
 import __seeTag from '../tags/see'
 import __staticTag from '../tags/static'
+import __valuesTag from '../tags/values'
 
 
 import __defaultTemplate from '../templates/default'
@@ -31,10 +32,8 @@ export default {
 		return : __returnTag,
 		default : __defaultTag,
 		see : __seeTag,
-		static : __staticTag
-	},
- 	parts : {
-		group : __groupPart
+		static : __staticTag,
+		values : __valuesTag
 	},
 	templates : {
 		default : __defaultTemplate,

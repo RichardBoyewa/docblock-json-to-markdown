@@ -1,6 +1,7 @@
 import __jsonToMarkdown from './core/jsonToMarkdown';
 import __renderBlock from './core/renderBlock';
 import __renderTag from './core/renderTag';
+import __renderBlocks from './core/renderBlocks';
 import __renderTypes from './utils/renderTypes';
 import __titleLevel from './utils/titleLevel';
 import __config from './core/config';
@@ -21,6 +22,7 @@ class DocblockJsonToMarkdown {
 		for(let key in this._config.templates) {
 			this._config.templates[key] = this._config.templates[key].bind(this);
 		}
+		this.renderBlocks = __renderBlocks.bind(this);
 		this._renderBlock = __renderBlock.bind(this);
 		this._renderTag = __renderTag.bind(this);
 		this._renderTypes = __renderTypes.bind(this);
