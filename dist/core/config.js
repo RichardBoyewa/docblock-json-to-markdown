@@ -87,9 +87,6 @@ exports.default = {
 		static: _static2.default,
 		values: _values2.default
 	},
-	parts: {
-		group: _group2.default
-	},
 	templates: {
 		default: _default4.default,
 		scss: _scss2.default,

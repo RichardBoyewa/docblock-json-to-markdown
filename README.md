@@ -133,6 +133,13 @@ your code here...
 ```
 @values 	Hello|World
 ```
+- ```event``` : Specify if the docblock document an event or not
+	- Usage :
+```
+@name 	my-cool-event
+@event
+etc...
+```
 
 ### Types
 
@@ -223,32 +230,37 @@ export default function defaultTemplate(data) {
 			title : 'Constructor'
 		}),
 		this._config.parts.group(data.filter((block) => {
-			return block.styleguide !== undefined;
+			return ! block.event && block.styleguide !== undefined;
 		}), {
 			title : 'Examples',
 			description : "Here's some usage examples."
 		}),
 		this._config.parts.group(data.filter((block) => {
-			return block.prop !== undefined;
+			return ! block.event && block.prop !== undefined;
 		}), {
 			title : 'Attributes',
 			description : "Here's the list of available attribute to set on the element."
 		}),
 		this._config.parts.group(data.filter((block) => {
-			return block.setting !== undefined;
+			return ! block.event && block.setting !== undefined;
 		}), {
 			title : 'Settings',
 			description : "Here's the list of available settings."
 		}),
 		this._config.parts.group(data.filter((block) => {
-			return ! block.return && block.types !== undefined && ! block.private && ! block.protected;
+			return ! block.event && ! block.return && block.types !== undefined && ! block.private && ! block.protected;
 		}), {
 			title : 'Properties'
 		}),
 		this._config.parts.group(data.filter((block) => {
-			return ! block.types && ! block.private && ! block.protected;
+			return ! block.event && ! block.types && ! block.private && ! block.protected;
 		}), {
 			title : 'Methods'
+		}),
+		this._config.parts.group(data.filter((block) => {
+			return block.event && ! block.private && ! block.protected;
+		}), {
+			title : 'Events'
 		})
 	].join("\n");
 }
