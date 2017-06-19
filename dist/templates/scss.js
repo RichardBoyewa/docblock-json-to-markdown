@@ -5,21 +5,21 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = scssTemplate;
 function scssTemplate(data) {
-	return [this._config.parts.group(data.filter(function (block, index) {
+	return [this.renderBlocks(data.filter(function (block, index) {
 		return index === 0;
 	}), {
 		title: '@[0].name',
 		titleLevelAdd: 1,
 		doNotRender: ['name']
-	}), this._config.parts.group(data.filter(function (block) {
+	}), this.renderBlocks(data.filter(function (block) {
 		return block.mixin === true;
 	}), {
 		title: 'Mixins'
-	}), this._config.parts.group(data.filter(function (block) {
+	}), this.renderBlocks(data.filter(function (block) {
 		return block.function === true;
 	}), {
 		title: 'Functions'
-	}), this._config.parts.group(data.filter(function (block) {
+	}), this.renderBlocks(data.filter(function (block) {
 		return block.types;
 	}), {
 		title: 'Variables'

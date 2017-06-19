@@ -16,6 +16,10 @@ var _renderTag = require('./core/renderTag');
 
 var _renderTag2 = _interopRequireDefault(_renderTag);
 
+var _renderBlocks = require('./core/renderBlocks');
+
+var _renderBlocks2 = _interopRequireDefault(_renderBlocks);
+
 var _renderTypes = require('./utils/renderTypes');
 
 var _renderTypes2 = _interopRequireDefault(_renderTypes);
@@ -58,6 +62,7 @@ var DocblockJsonToMarkdown = function DocblockJsonToMarkdown() {
 	for (var _key2 in this._config.templates) {
 		this._config.templates[_key2] = this._config.templates[_key2].bind(this);
 	}
+	this.renderBlocks = _renderBlocks2.default.bind(this);
 	this._renderBlock = _renderBlock2.default.bind(this);
 	this._renderTag = _renderTag2.default.bind(this);
 	this._renderTypes = _renderTypes2.default.bind(this);
