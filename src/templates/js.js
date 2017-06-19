@@ -14,30 +14,35 @@ export default function jsTemplate(data) {
 			title : 'Constructor'
 		}),
 		this.renderBlocks(data.filter((block) => {
-			return block.styleguide !== undefined;
+			return ! block.event && block.styleguide !== undefined;
 		}), {
 			title : 'Examples',
 			description : "Here's some usage examples."
 		}),
 		this.renderBlocks(data.filter((block) => {
-			return block.prop !== undefined;
+			return ! block.event && block.prop !== undefined;
 		}), {
 			title : 'Attributes',
 			description : "Here's the list of available attribute to set on the element."
 		}),
 		this.renderBlocks(data.filter((block) => {
-			return block.setting !== undefined;
+			return ! block.event && block.setting !== undefined;
 		}), {
 			title : 'Settings',
 			description : "Here's the list of available settings."
 		}),
 		this.renderBlocks(data.filter((block) => {
-			return ! block.return && block.types !== undefined && ! block.private && ! block.protected;
+			return ! block.event && ! block.return && block.types !== undefined && ! block.private && ! block.protected;
 		}), {
 			title : 'Properties'
 		}),
 		this.renderBlocks(data.filter((block) => {
-			return ! block.types && ! block.private && ! block.protected;
+			return ! block.event && ! block.types && ! block.private && ! block.protected;
+		}), {
+			title : 'Methods'
+		}),
+		this.renderBlocks(data.filter((block) => {
+			return block.event && ! block.private && ! block.protected;
 		}), {
 			title : 'Methods'
 		})
