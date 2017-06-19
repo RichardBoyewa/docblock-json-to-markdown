@@ -44,7 +44,7 @@ export default function jsTemplate(data) {
 		this.renderBlocks(data.filter((block) => {
 			return block.event && ! block.private && ! block.protected;
 		}), {
-			title : 'Methods'
+			title : 'Events'
 		})
 	].join("\n");
 }
