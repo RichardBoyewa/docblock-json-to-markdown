@@ -1,6 +1,6 @@
 {
   "name": "coffeekraken-docblock-json-to-markdown",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Transform with ease a coffeekraken-docblock-parser resulting JSON into a beautiful markdown file",
   "main": "dist/index.js",
   "scripts": {
@@ -33,7 +33,7 @@
     "babel-preset-es2015-loose": "^8.0.0",
     "babel-preset-es2015-node": "^6.1.1",
     "babel-preset-stage-0": "^6.16.0",
-    "coffeekraken-docblock-parser": "0.0.2",
+    "coffeekraken-docblock-parser": "^1.0.0",
     "coffeekraken-testing-stack": "0.0.2",
     "concurrently": "^3.1.0",
     "express": "^4.14.0",

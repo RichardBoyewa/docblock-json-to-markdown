@@ -42,7 +42,7 @@ function jsTemplate(data) {
 	}), this.renderBlocks(data.filter(function (block) {
 		return block.event && !block.private && !block.protected;
 	}), {
-		title: 'Methods'
+		title: 'Events'
 	})].join("\n");
 }
 module.exports = exports['default'];
