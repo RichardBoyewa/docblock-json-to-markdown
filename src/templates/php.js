@@ -16,7 +16,7 @@ export default function scssTemplate(data) {
 		this.renderBlocks(data.filter(function (block) {
 			return !block.return && block.types !== undefined && !block.private && !block.protected;
 		}), {
-			title: 'Properties'
+			title: 'Public properties'
 		}),
 		this.renderBlocks(data.filter((block) => {
 			return block.static === true && block.public;
