@@ -1,6 +1,6 @@
 {
   "name": "coffeekraken-docblock-json-to-markdown",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Transform with ease a coffeekraken-docblock-parser resulting JSON into a beautiful markdown file",
   "main": "dist/index.js",
   "scripts": {

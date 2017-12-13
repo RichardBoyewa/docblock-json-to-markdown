@@ -16,6 +16,10 @@ var _extends = require('../tags/extends');
 
 var _extends2 = _interopRequireDefault(_extends);
 
+var _implements = require('../tags/implements');
+
+var _implements2 = _interopRequireDefault(_implements);
+
 var _author = require('../tags/author');
 
 var _author2 = _interopRequireDefault(_author);
@@ -68,6 +72,10 @@ var _js = require('../templates/js');
 
 var _js2 = _interopRequireDefault(_js);
 
+var _php = require('../templates/php');
+
+var _php2 = _interopRequireDefault(_php);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
@@ -75,6 +83,7 @@ exports.default = {
 	tags: {
 		example: _example2.default,
 		extends: _extends2.default,
+		implements: _implements2.default,
 		author: _author2.default,
 		name: _name2.default,
 		body: _body2.default,
@@ -90,7 +99,8 @@ exports.default = {
 	templates: {
 		default: _default4.default,
 		scss: _scss2.default,
-		js: _js2.default
+		js: _js2.default,
+		php: _php2.default
 	},
 	types: {
 		js: {
@@ -119,6 +129,21 @@ exports.default = {
 			Color: 'http://www.sass-lang.com/documentation/file.SASS_REFERENCE.html#colors',
 			Function: 'http://www.sass-lang.com/documentation/file.SASS_REFERENCE.html#functions',
 			Mixin: 'http://www.sass-lang.com/documentation/file.SASS_REFERENCE.html#mixins'
+		},
+		php: {
+			String: 'http://php.net/manual/en/language.types.string.php',
+			Boolean: 'http://php.net/manual/en/language.types.boolean.php',
+			Integer: 'http://php.net/manual/en/language.types.integer.php',
+			Float: 'http://php.net/manual/en/language.types.float.php',
+			Double: 'http://php.net/manual/en/language.types.float.php',
+			Array: 'http://php.net/manual/en/language.types.array.php',
+			Object: 'http://php.net/manual/en/language.types.object.php',
+			Callable: 'http://php.net/manual/en/language.types.callable.php',
+			Resource: 'http://php.net/manual/en/language.types.resource.php',
+			NULL: 'http://php.net/manual/en/language.types.null.php',
+			Mixed: 'http://php.net/manual/en/language.pseudo-types.php#language.types.mixed',
+			Number: 'http://php.net/manual/en/language.pseudo-types.php#language.types.number',
+			Callback: 'http://php.net/manual/en/language.pseudo-types.php#language.types.callback'
 		}
 	}
 };
