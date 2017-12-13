@@ -2,6 +2,7 @@ import __groupPart from '../parts/group'
 
 import __exampleTag from '../tags/example'
 import __extendsTag from '../tags/extends'
+import __implementsTag from '../tags/implements'
 import __authorTag from '../tags/author'
 import __nameTag from '../tags/name'
 import __bodyTag from '../tags/body'
@@ -17,12 +18,14 @@ import __valuesTag from '../tags/values'
 import __defaultTemplate from '../templates/default'
 import __scssTemplate from '../templates/scss'
 import __jsTemplate from '../templates/js'
+import __phpTemplate from '../templates/php'
 
 export default {
 	language : 'js',
 	tags : {
 		example : __exampleTag,
 		extends : __extendsTag,
+		implements: __implementsTag,
 		author : __authorTag,
 		name : __nameTag,
 		body : __bodyTag,
@@ -38,7 +41,8 @@ export default {
 	templates : {
 		default : __defaultTemplate,
 		scss : __scssTemplate,
-		js : __jsTemplate
+		js : __jsTemplate,
+		php : __phpTemplate
 	},
 	types : {
 		js : {
@@ -67,6 +71,21 @@ export default {
 			Color : 'http://www.sass-lang.com/documentation/file.SASS_REFERENCE.html#colors',
 			Function : 'http://www.sass-lang.com/documentation/file.SASS_REFERENCE.html#functions',
 			Mixin : 'http://www.sass-lang.com/documentation/file.SASS_REFERENCE.html#mixins'
+		},
+		php : {
+			String: 'http://php.net/manual/en/language.types.string.php',
+			Boolean: 'http://php.net/manual/en/language.types.boolean.php',
+			Integer: 'http://php.net/manual/en/language.types.integer.php',
+			Float: 'http://php.net/manual/en/language.types.float.php',
+			Double: 'http://php.net/manual/en/language.types.float.php',
+			Array: 'http://php.net/manual/en/language.types.array.php',
+			Object: 'http://php.net/manual/en/language.types.object.php',
+			Callable: 'http://php.net/manual/en/language.types.callable.php',
+			Resource: 'http://php.net/manual/en/language.types.resource.php',
+			NULL: 'http://php.net/manual/en/language.types.null.php',
+			Mixed: 'http://php.net/manual/en/language.pseudo-types.php#language.types.mixed',
+			Number: 'http://php.net/manual/en/language.pseudo-types.php#language.types.number',
+			Callback: 'http://php.net/manual/en/language.pseudo-types.php#language.types.callback'
 		}
 	}
 }
